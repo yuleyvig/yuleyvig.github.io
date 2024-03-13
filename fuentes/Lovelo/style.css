@@ -1,0 +1,141 @@
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    background-color: rgba(255, 255, 255, 0.459);
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    margin: 20px 10px 20px 10px;
+}
+.logo{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    text-align: center;
+}
+header ul li{
+    margin: 15px;
+    color: black;
+}
+
+.slidershow{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.slider input{
+    visibility: hidden;
+    display: none;
+}
+.buttons{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 50px;
+    gap: 10px;
+}
+.buttons label{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    opacity: 0.5;
+    cursor: pointer;
+    z-index: 1;
+    transition: 300ms ease-in-out;
+}
+.buttons label:hover{
+    scale: 1.2;
+    opacity: 1;
+}
+
+.slider input:nth-child(1):checked ~ .buttons label:nth-child(1),
+.slider input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.slider input:nth-child(3):checked ~ .buttons label:nth-child(3),
+.slider input:nth-child(4):checked ~ .buttons label:nth-child(4),
+.slider input:nth-child(5):checked ~ .buttons label:nth-child(5),
+.slider input:nth-child(6):checked ~ .buttons label:nth-child(6),
+.slider input:nth-child(7):checked ~ .buttons label:nth-child(7)
+{
+    opacity: 1;
+    scroll-margin: 1.2;
+    width: 40px;
+}
+.content{
+    position: relative;
+    width: 700vw;
+    display: flex;
+    transition: 400ms ease-in-out;
+
+}
+.primerslide,.segundoslide,.tercerslide,.cuartoslide,.quintoslide,.sextoslide,.septimoslide{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.slider input:nth-child(1):checked ~ .content{
+    left: 0;
+}
+.slider input:nth-child(2):checked ~ .content{
+    left: -100vw;
+}
+.slider input:nth-child(3):checked ~ .content{
+    left: -200vw;
+}
+.slider input:nth-child(4):checked ~ .content{
+    left: -300vw;
+}
+.slider input:nth-child(5):checked ~ .content{
+    left: -400vw;
+}
+.slider input:nth-child(6):checked ~ .content{
+    left: -500vw;
+}
+.slider input:nth-child(7):checked ~ .content{
+    left: -600vw;
+}
+.primerslide img{
+    width: 750px;
+}
+.segundoslide img{
+    width: 750px;
+}
+.tercerslide img{
+    width: 750px;
+}
+.cuartoslide img{
+    width: 750px;
+}
+.quintoslide img{
+    width: 750px;
+}
+.sextoslide img{
+    width: 750px;
+}
+.septimoslide img{
+    width: 750px;
+}
+footer{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align:right;
+    color: black;
+}
